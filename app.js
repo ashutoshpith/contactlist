@@ -10,7 +10,7 @@ var route = require('./routes/route')
 var app = express()
 
 // connect to mongoose
-mongose.connect('mongodb://localhost:27017/contactlist')
+mongose.connect('mongodb://contactlist:dgtwa34892@ds125302.mlab.com:25302/heroku_l94dk3z2')
 
 // on connection
 mongose.connection.on('connected', () => {
