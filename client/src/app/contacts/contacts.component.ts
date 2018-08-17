@@ -15,8 +15,24 @@ export class ContactsComponent implements OnInit {
   first_name: string;
   last_name: string;
   phone: string;
+
   constructor(private contactService: ContactService) { }
 
+  deleteContact(id: any) {
+    const contacts = this.contacts;
+    this.contactService.deleteContact(id)
+    .subscribe(data => {
+      if (data.n === 1) {
+        for (let i = 0; i < contacts.length; i++) {
+        if (contacts[i]._id === id) {
+          contacts.splice(i, 1);
+        }
+        }
+
+      }
+    });
+
+  }
   ngOnInit() {
     this.contactService.getContacts()
     .subscribe(contacts => this.contacts = contacts);
