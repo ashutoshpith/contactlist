@@ -12,7 +12,7 @@ export class ContactService {
 // retreving contact
 
 getContacts() {
-  return this.http.get('htttp://localhost:3000/api/contacts')
+  return this.http.get('http://localhost:3000/api/contacts')
   .pipe(map(res => res.json()));
 }
  addContact(newContact) {

@@ -8,9 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ContactsComponent } from './contacts/contacts.component';
 
-const appRoutes: Routes = [
-  {path: 'contact', component: ContactsComponent}
-];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +18,7 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule,
-
-
-
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
