@@ -36,7 +36,7 @@ export class ContactsComponent implements OnInit {
  }
 
 
-  deleteContact(id: any) {
+ deleteContact(id: any) {
     const contacts = this.contacts;
     this.contactService.deleteContact(id)
     .subscribe(data => {
